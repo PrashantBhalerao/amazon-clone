@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assests/icons8-amazon-shopping-app-48.png" type="image/x-icon" />
+  <title>Amazon.in: Online Shopping site in India</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════
+       HEADER
+  ════════════════════════════════ -->
+  <header class="header" id="header">
+
+    <!-- TOP ROW -->
+    <div class="nav-top">
+
+      <!-- Logo -->
+      <a href="#" class="nav-logo" aria-label="Amazon home">
+        <img src="./assests/logo.png.png" alt="Amazon" class="logo-img" />
+      </a>
+
+      <!-- Deliver location (hidden on mobile) -->
+      <a href="#" class="nav-location nav-hide-mobile">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <span class="loc-top">Deliver to Pune</span>
+          <span class="loc-bot">Pune 411008 ▾</span>
+        </div>
+      </a>
+
+      <!-- Search (hidden on mobile — full-width row below) -->
+      <div class="nav-search nav-hide-mobile">
+        <select class="search-cat" aria-label="Search category">
+          <option>All</option>
+          <option>All Departments</option>
+          <option>Arts &amp; Crafts</option>
+          <option>Automotive</option>
+          <option>Baby</option>
+          <option>Beauty &amp; Personal Care</option>
+          <option>Books</option>
+          <option>Computers</option>
+          <option>Deals</option>
+          <option>Electronics</option>
+          <option>Fashion</option>
+          <option>Home &amp; Kitchen</option>
+          <option>Mobiles</option>
+          <option>Sports</option>
+          <option>Toys</option>
+        </select>
+        <input type="text" placeholder="Search Amazon.in" class="search-input" aria-label="Search Amazon.in" />
+        <button class="search-btn" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Right group (desktop) -->
+      <div class="nav-right">
+
+        <!-- Language (hidden on mobile) -->
+        <a href="#" class="nav-flag nav-hide-mobile">
+          <img src="./assests/flag.png" alt="India" />
+          <span>EN ▾</span>
+        </a>
+
+        <!-- Account -->
+        <a href="#" class="nav-item nav-hide-mobile">
+          <span class="ni-top">Hello, sign in</span>
+          <span class="ni-bot">Account &amp; Lists ▾</span>
+        </a>
+
+        <!-- Orders -->
+        <a href="#" class="nav-item nav-hide-mobile">
+          <span class="ni-top">Returns</span>
+          <span class="ni-bot">&amp; Orders</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="#" class="nav-cart">
+          <span class="cart-badge" id="cartCount">0</span>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-txt">Cart</span>
+        </a>
+
+      </div><!-- /nav-right -->
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger nav-show-mobile" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div><!-- /nav-top -->
+
+    <!-- MOBILE SEARCH ROW -->
+    <div class="nav-search-mobile nav-show-mobile">
+      <input type="text" placeholder="Search Amazon.in" aria-label="Search Amazon.in" />
+      <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <!-- BOTTOM NAV BAR -->
+    <div class="nav-bottom" id="navBottom">
+      <div class="nav-bottom-inner">
+        <a href="#" class="nb-all">
+          <i class="fa-solid fa-bars"></i> All
+        </a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Buy Again</a>
+        <a href="#">Registry</a>
+        <a href="#">Fresh</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Fashion</a>
+        <a href="#">Electronics</a>
+        <a href="#">Bestsellers</a>
+        <a href="#">Sell</a>
+        <a href="#">Prime</a>
+      </div>
+      <span class="nav-promo nav-hide-mobile">🔥 Great Republic Day Sale | Ends Tomorrow</span>
+    </div>
+
+    <!-- MOBILE SLIDE MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mm-header">
+        <i class="fa-solid fa-user-circle"></i>
+        <span>Hello, sign in</span>
+        <button class="mm-close" id="mmClose" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mm-section-title">Browse Categories</div>
+      <a href="#" class="mm-link"><i class="fa-solid fa-mobile-screen"></i> Mobiles</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-tv"></i> Electronics</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-shirt"></i> Fashion</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-house"></i> Home &amp; Kitchen</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-dumbbell"></i> Sports &amp; Fitness</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-book"></i> Books</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-baby"></i> Baby</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-car"></i> Automotive</a>
+      <div class="mm-section-title">Help &amp; Settings</div>
+      <a href="#" class="mm-link"><i class="fa-solid fa-user"></i> Your Account</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-box"></i> Your Orders</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-headset"></i> Customer Service</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-globe"></i> English</a>
+      <a href="#" class="mm-link"><i class="fa-solid fa-sign-in-alt"></i> Sign In</a>
+    </div>
+    <div class="mm-overlay" id="mmOverlay"></div>
+
+  </header>
+
+  <!-- ════════════════════════════════
+       MAIN
+  ════════════════════════════════ -->
+  <main>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+      <img src="./assests/cover.jpg" alt="Great Sale Banner" class="hero-img" />
+      <div class="hero-fade"></div>
+    </section>
+
+    <!-- DEAL CARDS (4-up grid, overlap hero) -->
+    <section class="deal-grid" aria-label="Featured deals">
+
+      <article class="deal-card">
+        <h2>Up to 80% off | Smartphones &amp; more</h2>
+        <div class="dc-grid">
+          <div class="dc-item">
+            <img src="./assests/box1.jpg" alt="Smartphones" loading="lazy" />
+            <span>Smartphones</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/box2.jpg" alt="Headphones" loading="lazy" />
+            <span>Headphones</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/box3.jpg" alt="Tablets" loading="lazy" />
+            <span>Tablets &amp; more</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/box4.jpg" alt="Int'l brands" loading="lazy" />
+            <span>Int'l brands</span>
+          </div>
+        </div>
+        <a href="#" class="dc-link">See all offers</a>
+      </article>
+
+      <article class="deal-card">
+        <h2>Up to 65% off | Home appliances</h2>
+        <div class="dc-grid">
+          <div class="dc-item">
+            <img src="./assests/WASHING MACHINE.jpg" alt="Washing machines" loading="lazy" />
+            <span>Washing machines</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/REFRIGERATORS.jpg" alt="Refrigerators" loading="lazy" />
+            <span>Refrigerators</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/AC.jpg" alt="Air conditioners" loading="lazy" />
+            <span>Air conditioners</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/CHIMNEY.jpg" alt="Chimneys" loading="lazy" />
+            <span>Chimneys</span>
+          </div>
+        </div>
+        <a href="#" class="dc-link">See all offers</a>
+      </article>
+
+      <article class="deal-card">
+        <h2>Up to 80% off | Home &amp; Kitchen</h2>
+        <div class="dc-grid">
+          <div class="dc-item">
+            <img src="./assests/KITCHEN.jpg" alt="Kitchen" loading="lazy" />
+            <span>Kitchen essentials</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/HOME DECOR.jpg" alt="Home decor" loading="lazy" />
+            <span>Home decor</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/FURTINURE.jpg" alt="Furniture" loading="lazy" />
+            <span>Furniture</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/HOME IMPRROVEMENT.jpg" alt="Home improvement" loading="lazy" />
+            <span>Home improvement</span>
+          </div>
+        </div>
+        <a href="#" class="dc-link">See all offers</a>
+      </article>
+
+      <article class="deal-card">
+        <h2>Min 50% off | Amazon Brands</h2>
+        <div class="dc-grid">
+          <div class="dc-item">
+            <img src="./assests/COOKWARE.jpg" alt="Cookware" loading="lazy" />
+            <span>Cookware &amp; dining</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/HOME ESSENTIALSS.jpg" alt="Home essentials" loading="lazy" />
+            <span>Home essentials</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/DAILY ESSE.jpg" alt="Daily essentials" loading="lazy" />
+            <span>Daily essentials</span>
+          </div>
+          <div class="dc-item">
+            <img src="./assests/PREMIUM STYLES.jpg" alt="Premium styles" loading="lazy" />
+            <span>Premium styles</span>
+          </div>
+        </div>
+        <a href="#" class="dc-link">See all offers</a>
+      </article>
+
+    </section>
+
+    <!-- SCROLL CAROUSEL: WATCHES -->
+    <section class="carousel-section" aria-label="Smartwatches">
+      <div class="cs-header">
+        <h2>Up to 70% off | Bestselling smartwatches</h2>
+        <a href="#">See all &rsaquo;</a>
+      </div>
+      <div class="cs-track" role="list">
+        <div class="cs-item" role="listitem"><img src="./assests/watch 1.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch2.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch3.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch4.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch5.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch6.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch7.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch8.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch9.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch10.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch11.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch12.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch13.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch14.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch15.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch16.jpg" alt="Watch" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/watch17.jpg" alt="Watch" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- SCROLL CAROUSEL: PHONES -->
+    <section class="carousel-section" aria-label="Flagship phones">
+      <div class="cs-header">
+        <h2>Up to 40% off | Best flagship phones</h2>
+        <a href="#">See all &rsaquo;</a>
+      </div>
+      <div class="cs-track" role="list">
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 1.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 2.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 3.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 4.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 5.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 6.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 7.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 8.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 9.jpg" alt="Phone" loading="lazy" /></div>
+        <div class="cs-item" role="listitem"><img src="./assests/PHONE 10.jpg" alt="Phone" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- FEATURED BOXES -->
+    <section class="featured-grid" aria-label="Featured categories">
+      <article class="feat-box">
+        <h2>Starting &#8377;349 | Bestselling headphones</h2>
+        <img src="./assests/box2.jpg" alt="Headphones" loading="lazy" />
+        <a href="#">See all offers</a>
+      </article>
+      <article class="feat-box">
+        <h2>Up to 75% off | Electronics &amp; accessories</h2>
+        <img src="./assests/box3.jpg" alt="Electronics" loading="lazy" />
+        <a href="#">See all offers</a>
+      </article>
+      <article class="feat-box">
+        <h2>Up to 70% off | International brands</h2>
+        <img src="./assests/box4.jpg" alt="Int'l brands" loading="lazy" />
+        <a href="#">See all offers</a>
+      </article>
+      <article class="feat-box">
+        <h2>Great deals on top accessories</h2>
+        <img src="./assests/box1.jpg" alt="Accessories" loading="lazy" />
+        <a href="#">See all offers</a>
+      </article>
+    </section>
+
+    <!-- SIGN IN NUDGE -->
+    <section class="signin-nudge">
+      <h3>See personalized recommendations</h3>
+      <a href="#" class="si-btn">Sign in</a>
+      <p>New customer? <a href="#" class="si-start">Start here.</a></p>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer>
+
+    <!-- Back to top -->
+    <button class="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      Back to top
+    </button>
+
+    <!-- Links -->
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="#">About Amazon</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Releases</a></li>
+          <li><a href="#">Amazon Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="#">Sell on Amazon</a></li>
+          <li><a href="#">Sell under Amazon Accelerator</a></li>
+          <li><a href="#">Amazon Global Selling</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Fulfilment by Amazon</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Amazon Pay on Merchants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Returns Centre</a></li>
+          <li><a href="#">100% Purchase Protection</a></li>
+          <li><a href="#">Amazon App Download</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="f-divider" />
+
+    <div class="footer-bottom">
+      <img src="./assests/logo.png.png" alt="Amazon" class="f-logo" />
+      <div class="f-btns">
+        <button><i class="fa-solid fa-globe"></i> English</button>
+        <button><i class="fa-solid fa-indian-rupee-sign"></i> INR</button>
+        <button><i class="fa-solid fa-flag"></i> India</button>
+      </div>
+    </div>
+
+    <div class="footer-countries">
+      <a href="#">Australia</a><a href="#">Brazil</a><a href="#">Canada</a>
+      <a href="#">China</a><a href="#">France</a><a href="#">Germany</a>
+      <a href="#">Italy</a><a href="#">Japan</a><a href="#">Mexico</a>
+      <a href="#">Netherlands</a><a href="#">Poland</a><a href="#">Singapore</a>
+      <a href="#">Spain</a><a href="#">UAE</a><a href="#">United Kingdom</a>
+      <a href="#">United States</a>
+    </div>
+
+    <div class="footer-legal">
+      <a href="#">Conditions of Use &amp; Sale</a>
+      <a href="#">Privacy Notice</a>
+      <a href="#">Interest-Based Ads</a>
+      <span>&copy; 1996–2025 Amazon.com, Inc.</span>
+    </div>
+
+  </footer>
+
+  <script>
+    // ── Hamburger / slide menu ──────────────────────────────
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const mmOverlay    = document.getElementById('mmOverlay');
+    const mmClose      = document.getElementById('mmClose');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mmOverlay.classList.add('open');
+      document.body.classList.add('menu-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+    }
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mmOverlay.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    hamburgerBtn.addEventListener('click', openMenu);
+    mmClose.addEventListener('click', closeMenu);
+    mmOverlay.addEventListener('click', closeMenu);
+
+    // ── Sticky header height offset ─────────────────────────
+    function setOffset() {
+      const h = document.getElementById('header').offsetHeight;
+      document.body.style.paddingTop = h + 'px';
+    }
+    setOffset();
+    window.addEventListener('resize', setOffset);
+  </script>
+
+</body>
+</html>
