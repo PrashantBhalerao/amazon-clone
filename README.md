@@ -43,10 +43,9 @@ This website is optimized for:
 Add your desktop screenshots here
 
 
-```md
 ---<img width="1876" height="848" alt="Screenshot 2026-05-17 153334" src="https://github.com/user-attachments/assets/75203650-7fd0-487d-9433-ad64a6639623" />
 <img width="1883" height="856" alt="Screenshot 2026-05-17 153351" src="https://github.com/user-attachments/assets/91483d6d-4bea-4661-ba5b-17ddcba6a988" />
-```
+
 
 
 
